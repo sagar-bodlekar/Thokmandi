@@ -9,7 +9,8 @@
 
 .item td {
   border: 1px solid black;
-}</style>
+}
+</style>
 <br>
 <br>
 <br>
@@ -17,7 +18,7 @@
 <br>
 <!-- this is action it -->
 <form>
-  Select your favorite fruit:
+  Select your favorite fruit:       
   <select id="mySelect">
     <option value="apple">Apple</option>
     <option value="orange">Orange</option>
@@ -35,11 +36,39 @@ let buttonVal = document.getElementById("mySelect").value;
 console.log(buttonVal);
 document.getElementById('btnTxt').innerHTML = buttonVal;  
 }
+$(function() {
+  $('.dropdown').find('.dropdown-toggle').html('Orders');
+  $('.modal-btn').html('Add '+'Order');
+  $(".dropdown-menu li a").click(function() {
+    var selText = $(this).text();
+    $(this).parents('.dropdown').find('.dropdown-toggle').html(selText);
+    $('.modal-btn').html('Add '+selText);
+    calltabledata(selText);
+  });
+/**
+ * modal button click function
+ */
+$('.modal-btn').click(function () {
+    var modalvalue = $('.modal-btn').text();
+    $( "#myModal" ).fadeIn("slow");
+    $('#myModal').find('.modal-title').html(modalvalue);
+    if(modalvalue ==='Add Order'){
+      console.log(modalvalue);
+    }
+});
+function calltabledata(data) {
+  /**
+   * this is for data for datatable through ajax and set datatable 
+   */
+  console.log(data);
+  // location.reload(); this is using for page reload 
+};
+})
 </script>
 <!-- apply on your code edit -->
 <!-- Drop Down -->
 <div class="container">                                         
-  <div class="dropdown mx-3">
+  <div class="dropdown">
     <button class="btn btn-default  dropdown-toggle btn-lg" type="button" data-toggle="dropdown">Select Table
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
@@ -52,12 +81,11 @@ document.getElementById('btnTxt').innerHTML = buttonVal;
   </div>
   <br>
   <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
+<button type="button" class="btn btn-info btn-lg modal-btn" data-toggle="modal" data-target="#myModal">Open Modal</button>
 <!-- Modal start -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -71,7 +99,6 @@ document.getElementById('btnTxt').innerHTML = buttonVal;
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-
   </div>
 </div>
 <!-- Modal End -->
