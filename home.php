@@ -1,7 +1,7 @@
 <?php 
    include("header.php");
    session_start();
-   include "db_conn.php";
+   include "./db/db_conn.php";
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 
 <!DOCTYPE html>

@@ -26,9 +26,10 @@
             <p class="copyright">&copy; 2024 <a href="www.Thokmandi.co.in" style="color:Yellow;">www.Thokmandi.co.in</a></p>
         </div>
     </footer>
-    <script src="js/sidebar.js"></script>
+    <script src="js/order.js"></script>
     <!--This is for icons-->
     <script src="https://kit.fontawesome.com/9b2a863acb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 </body>
 </html>
