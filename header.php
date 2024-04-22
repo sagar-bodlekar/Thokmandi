@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" /> <!-- data table-->
     
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/all.css"> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -32,3 +34,5 @@
 </header>
 <!-- </body>
 </html> -->
+<!-- https://cdn.datatables.net/2.0.5/js/dataTables.js
+https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css -->
