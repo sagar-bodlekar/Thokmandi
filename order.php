@@ -12,6 +12,8 @@
     border: 1px solid black;
   }
 
+
+
   /* .text {
     position: relative;
     color: rgb(255, 255, 255);
@@ -19,6 +21,65 @@
     text-transform: uppercase;
     font-size: 60px;
   } */
+
+  input[type="checkbox"] {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    -webkit-appearance: none;
+    border-radius: 20px;
+    outline: none;
+    transition: .4s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  input:checked[type="checkbox"] {
+    background: green;
+  }
+
+  input[type="checkbox"]::before {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: #8E9AA0;
+    border-radius: 50%;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: .4s;
+  }
+
+  input:checked[type="checkbox"]::before {
+    left: 50px;
+    background: #FFFFFF;
+  }
+
+  .toggle {
+    position: relative;
+    display: inline;
+  }
+
+  label {
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    pointer-events: none;
+    font-size: smaller;
+  }
+
+  .onbtn {
+    bottom: 0px;
+    left: 11px;
+  }
+
+  .ofbtn {
+    bottom: 0px;
+    right: 8px;
+    color: #8E9AA0;
+  }
 </style>
 <br>
 <br>
@@ -261,12 +322,14 @@
                   // });
                   if (response.length > 0) {
                     var tddata = "<th>Sno.</th><th>OrderId</th><th colspan='2'>Product Name</th><th>Total Price</th><th>Qty</th><th>Inword Qty</th><th>Product Status</th><th>Create Date</th><th>Update Date</th>";
-                    // tddata += "";
+                    tddata += "<td><button type='button' class='btn btn-primary'>Products <span class='badge badge-light'>9</span><span class='sr-only'>unread messages</span></button></td>";
+                    tddata += "<td><button type='button' class='btn btn-primary position-relative'>Pending <span class='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>99+</span></button></td>"
+                    tddata += "<td><div class='toggle'><input type='checkbox'><label for='' value='completed' class='onbtn'></label><label for='' value='pending' class='ofbtn'></label></div></td>";
                     // tddata += "";
                     var selectrow = $('tr[data-id="' + id + '"]');
                     var childdiv = $('.child-div');
                     var nextrow = $('<tr class="collapse child-tr-' + id + '" id="details-' + id + '"style="background-color: #000; font-size: 13px; position: fixed; color: white;padding-left: 55px;"></tr>').append(tddata);
-                    
+
                     // $(`#details-'${id}'`).collapse();
                     // nextrow.hide();
                     // selectrow.after(nextrow);
