@@ -1,4 +1,4 @@
-# How to Make Multi User Role Based Login Form in PHP and MySQL
+# Make Multiple section on single page work with modal and table dynamic
 
 version: 1.0.0
 
@@ -22,4 +22,4 @@ version: 1.0.0
 
 ## Authors
 
-[Elias Abdurrahman](https://github.com/codingWithElias)
+[Sagar Bodlekar](https://github.com/sagar-bodlekar)
