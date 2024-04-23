@@ -18,7 +18,7 @@ version: 1.0.0
 
 ## Full Tutorial
 
-[On Youtube](https://youtu.be/-8q3GLkr9Ts)
+
 
 ## Authors
 
