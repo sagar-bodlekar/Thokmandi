@@ -253,7 +253,6 @@
     /**initialize dropdown for reatiler */
     function initializeSelect2() {
       $('#retailerDropdown').select2({
-        // placeholder: 'Search for a retailer',
         allowClear: true
       });
     }
@@ -268,7 +267,10 @@
       // obj['Retailers'] = 'retailers'; 
       // obj['Salesman'] = 'salesman'; 
       // obj['Transports'] = 'transport';           
-      // console.log(obj);
+      console.log(data + "CHECKING VALUE");
+      $('.table-div').load("table.php");
+      return false;
+
       $.ajax({
         url: 'php/datavstable.php', // URL to fetch fresh dropdown data
         type: 'GET', // Method type
@@ -380,10 +382,17 @@
           console.error(error);
         }
       })
-
-
       // location.reload(); this is using for page reload 
     };
+
+
+    
+
+
+
+
+
+
   })
 </script>
 <!-- apply on your code edit -->
@@ -402,30 +411,30 @@
   </div>
   <br>
   <!-- Trigger the modal with a button -->
-
   <button type="button" class="btn btn-info btn-lg modal-btn" data-toggle="modal" data-target="#myModal">Open Modal</button>
-  <!-- Modal start -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+</div>
+<!-- Modal start -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-  <!-- Modal End -->
-
 </div>
+<!-- Modal End -->
 
-<div class="container">
+
+
+<div class="container table-div">
   <table id="myTable" class="display" style="width: 100%;border:3px solid black;">
     <thead>
       <tr>
@@ -439,13 +448,13 @@
   <center> Organisation PAN, Organisation GST, TAN Certification, Certificate of Incorporation(COI)</center>
 </div> -->
 <script>
-  $("table tbody").on("click", "tr.key", function() {
-    var active = $(this)
-    var trs = active.nextUntil(".key")
-    trs.show();
+  // $("table tbody").on("click", "tr.key", function() {
+  //   var active = $(this)
+  //   var trs = active.nextUntil(".key")
+  //   trs.show();
 
-    $("tr.item").not(trs).hide()
+  // //   $("tr.item").not(trs).hide()
 
-  })
+  // // })
 </script>
 <?php include("footer.php"); ?>
