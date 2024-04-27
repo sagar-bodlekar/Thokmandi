@@ -115,7 +115,8 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 	</body>
 
 	</html>
-<?php include("footer.php");
+<?php 
+include("footer.php");
 } else {
 	header("Location: index.php");
 } ?>
